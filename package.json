@@ -1,0 +1,35 @@
+{
+  "name": "hookiro",
+  "version": "0.1.0",
+  "description": "Minimal webhook receiver for local development",
+  "type": "module",
+  "bin": {
+    "hookiro": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --clean",
+    "dev": "tsup src/index.ts --format esm --watch",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "webhook",
+    "testing",
+    "development",
+    "ngrok",
+    "local"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@ngrok/ngrok": "^1.0.0",
+    "nanoid": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
