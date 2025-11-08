@@ -1,4 +1,8 @@
-# 🎣 Hookiro MVP
+<p align="center">
+  <img src="src/icon.svg" alt="Hookiro Logo" width="150" height="150">
+</p>
+
+#  Hookiro MVP
 
 A minimal webhook receiver for local development. Receive, store, and inspect webhook payloads instantly.
 
@@ -73,7 +77,7 @@ hookiro
 
 2. You'll see output like:
 ```
-🎣 Hookiro MVP v0.1.0
+ Hookiro MVP v0.1.0
 
 ✓ Webhook endpoint: http://localhost:3420/webhook
 ✓ Starting ngrok tunnel...
