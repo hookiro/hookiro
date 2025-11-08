@@ -1,0 +1,28 @@
+# Source files
+src/
+*.ts
+!*.d.ts
+tsconfig.json
+
+# Development
+.vscode/
+.idea/
+*.log
+npm-debug.log*
+
+# Tests
+test/
+tests/
+*.test.js
+*.spec.js
+
+# Build tools
+.github/
+.husky/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/

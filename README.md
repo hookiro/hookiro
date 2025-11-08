@@ -15,15 +15,41 @@ A minimal webhook receiver for local development. Receive, store, and inspect we
 
 ### Installation
 
+**Global Installation (Recommended):**
+
 ```bash
+# Install globally from npm (when published)
+npm install -g hookiro
+
+# Run hookiro from anywhere
+hookiro
+```
+
+**Local Development:**
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd hookiro
+
 # Install dependencies
 npm install
 
 # Build the project
 npm run build
 
+# Link globally for local testing
+npm link
+
 # Run hookiro
-npm start
+hookiro
+```
+
+**Or run without installing:**
+
+```bash
+# After building
+node dist/index.js
 ```
 
 ### Development Mode
@@ -32,7 +58,9 @@ npm start
 # Watch mode (rebuilds on file changes)
 npm run dev
 
-# In another terminal
+# In another terminal, run hookiro
+hookiro
+# or
 node dist/index.js
 ```
 
@@ -40,7 +68,7 @@ node dist/index.js
 
 1. Start Hookiro:
 ```bash
-node dist/index.js
+hookiro
 ```
 
 2. You'll see output like:
