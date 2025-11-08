@@ -8,10 +8,10 @@ A minimal webhook receiver for local development. Receive, store, and inspect we
 
 ## Features
 
-✅ **One Command Start** - Just run `hookiro start`
-✅ **Public URL via ngrok** - Instant webhook endpoint
+✅ **One Command Start** - Just run `hookiro`
+✅ **Public URLs via ngrok** - Both webhook endpoint and dashboard accessible publicly
 ✅ **Local Storage** - Webhooks saved to `~/.hookiro/webhooks.json`
-✅ **Web Interface** - View webhooks at `http://localhost:3420`
+✅ **Web Interface** - View webhooks locally or via ngrok
 ✅ **REST API** - Access webhooks via `/api/webhooks`
 ✅ **Zero Configuration** - Works out of the box
 
@@ -77,20 +77,22 @@ hookiro
 
 2. You'll see output like:
 ```
- Hookiro MVP v0.1.0
+🎣 Hookiro MVP v0.1.0
 
-✓ Webhook endpoint: http://localhost:3420/webhook
 ✓ Starting ngrok tunnel...
-✓ Public URL: https://abc123.ngrok.io/webhook
 
-📊 View webhooks: http://localhost:3420
+📊 Dashboard:         https://abc123.ngrok.io
+   (Local):           http://localhost:3420
+
+🎣 Webhook endpoint:  https://abc123.ngrok.io/webhook
+   (Local):           http://localhost:3420/webhook
 
 Listening for webhooks... (Press Ctrl+C to stop)
 ```
 
-3. Copy the public URL to your webhook service (Stripe, GitHub, etc.)
+3. Copy the public webhook URL to your webhook service (Stripe, GitHub, etc.)
 
-4. Open `http://localhost:3420` in your browser to view webhooks
+4. Open the dashboard URL (either ngrok or localhost) in your browser to view webhooks
 
 5. Send test webhooks:
 ```bash

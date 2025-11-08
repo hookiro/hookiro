@@ -13,19 +13,24 @@ async function main() {
   // Start HTTP server
   const port = 3420;
   await startServer(port);
-  console.log(`✓ Webhook endpoint: http://localhost:${port}/webhook`);
 
   // Start ngrok tunnel
   console.log('✓ Starting ngrok tunnel...');
   const publicUrl = await startTunnel(port);
-  if (publicUrl) {
-    console.log(`✓ Public URL: ${publicUrl}/webhook\n`);
-  } else {
-    console.log('✓ Tunnel not available - using local endpoint only\n');
-  }
 
-  // Show web interface URL
-  console.log(`📊 View webhooks: http://localhost:${port}\n`);
+  // Show URLs
+  console.log('');
+  if (publicUrl) {
+    console.log(`📊 Dashboard:         ${publicUrl}`);
+    console.log(`   (Local):           http://localhost:${port}`);
+    console.log('');
+    console.log(`🎣 Webhook endpoint:  ${publicUrl}/webhook`);
+    console.log(`   (Local):           http://localhost:${port}/webhook\n`);
+  } else {
+    console.log('✓ Tunnel not available - using local endpoint only');
+    console.log(`📊 Dashboard:         http://localhost:${port}`);
+    console.log(`🎣 Webhook endpoint:  http://localhost:${port}/webhook\n`);
+  }
 
   console.log('Listening for webhooks... (Press Ctrl+C to stop)');
 }
